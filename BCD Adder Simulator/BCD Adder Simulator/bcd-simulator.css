@@ -1,0 +1,231 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif; */
+ 
+/* Scroll Bar */
+ 
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+ 
+ 
+*{
+    box-sizing: border-box;
+}
+ 
+*::after, *::before{
+    box-sizing: border-box;
+}
+
+/* For altering the BCD Adder Title */
+
+h1{
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+ 
+body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
+/* Definition of layout */
+
+.container-grid{
+    margin: auto;
+    display: grid;;
+    /* border:1px solid black; */
+    /* min-height: 100vh; */
+    max-width: 50vw;
+    grid-template-rows: 1fr 1fr 8fr 100px;
+}
+
+/* .container-grid div{ */
+    /* border:1px solid black; */
+/* } */
+
+.container-grid div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    padding-block: 10px 10px;
+}
+
+/* Designing the calculate button */
+.container-grid div:nth-child(1) button{
+    font-size: 20px;
+    background-color: #4caf50;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    border:1px solid black;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 300ms ease;
+    transform: translateX(50%);
+}
+
+/* Hover Attribute to Calculate button */
+.container-grid div:nth-child(1) button:hover{
+    text-decoration: underline;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-underline-offset: 3px;
+}
+
+/* This div contains the styling of the input buttons and layout. Do not change */
+.container-grid div:nth-child(2){
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    /* gap:2rem;     */
+}
+
+.container-grid div:nth-child(2) div{
+    width: 15vw;
+    transform: translateX(30%);
+    display: flex;
+    /* border:1px solid black; */
+    flex-flow: row-reverse nowrap;
+    justify-content: space-evenly;
+}
+
+.container-grid div:nth-child(2) div{
+    padding-top: 20px;
+}
+
+/* This div contains the 3rd div, which contains the diagram for the adder as background image */
+
+.container-grid #diagram{
+    background-image: url('/BCD_Adder.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: multiply;
+}
+
+/* This controls the styling of int output div */
+
+.container-grid div:nth-child(4){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 10px;
+    position: relative;
+}
+
+/* This is the styling of the radio buttons which are used in input 1 and input 2 */
+
+.input1-div input[type="checkbox"],.input2-div input[type="checkbox"]  {
+    display: none;
+}
+
+.input1-div label, .input2-div label {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.input1-div input[type="checkbox"]:checked + label, .input2-div input[type="checkbox"]:checked + label {
+    background-color: #00ff00; /* Green color */
+}
+
+/* This contains the styling of the output div */
+
+.output-div{
+    width: 15vw;
+    transform: translateX(30%);
+    height: min-content;
+    /* position: relative; */
+    display:flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-around;
+    gap:15px;
+}
+
+.output-div div{
+    aspect-ratio: 1;
+    height: 30px;
+    border-radius: 50%;
+    border:1px solid black;
+}
+
+/* The carry div should be to the extreme left so modifying that */
+
+#carry{
+    position: absolute;
+    left: -100%;
+    transform: translateX(-5.2rem);
+}
+
+
+.output-container{
+    margin: auto;
+    border:1px solid black;
+    display:flex;
+    flex-flow: column nowrap;
+    overflow-y: auto;
+    width:40vw;
+    height: 50vh;
+    justify-content: flex-start;
+}
+
+.output-container .child{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border:1px solid black; */
+    flex-basis: 10vh;
+    /* position: relative; */
+    /* height: 10vh; */
+    /* width: 100%; */
+}
+
+.output-container .child .inputA,.output-container .child .inputB,.output-container .child .sum{
+    text-align: center;
+    padding-top:1rem;
+    font-family: 'Open Sans', sans-serif;   
+
+}
+
+.output-container .child .inputA,.output-container .child .inputB{
+    border-right: 1px solid black; 
+    border-bottom: 1px solid black;
+}
+.output-container .child .sum{
+    border-bottom: 1px solid black;
+}
+
+/* END */
+/* Any Doubts: Ask Tirthraj Mahajan */

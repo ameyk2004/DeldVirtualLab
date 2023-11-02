@@ -1,0 +1,88 @@
+<html>
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="1bitcomparator.css">
+</head>
+<body onload="compareBits()">
+<div class="container">
+  <div class="button">
+    <p style="margin-top: 20px;">
+    <label class = "switch">
+    
+      <input type = "checkbox" id="A" onchange="compareBits()">
+      <span class = "slider"></span>
+      </label>
+</p>
+     <br>
+     <p class="button2">
+      <br>
+      <label class = "switch">
+      <input type = "checkbox" id="B" onchange="compareBits()">
+      <span class = "slider"></span>
+      </label>
+</p>
+  </div>
+  <div class="img">
+    <img src = "Resources/onebit_circuitdiagram.png" width = "500">
+  </div>
+  <div class="output">
+    <p id="smaller"></p>
+    <p id="equal"></p>
+    <p id="greater"></p>
+
+    <div class="led" id="smallerled"></div>
+    <div class="led" id="equalled"></div>
+    <div class="led" id="greaterled"></div>
+  </div>
+</div>
+<script>
+  function compareBits()
+            {
+              var small_led = document.getElementById("smallerled");
+              var equal_led = document.getElementById("equalled");
+              var great_led = document.getElementById("greaterled");
+
+                var inputA = document.getElementById("A");
+                var inputB = document.getElementById("B");
+
+                if(inputA.checked)
+                {
+                    var valueA = 1;
+                }
+                else
+                {
+                    var valueA = 0;
+                }
+                if(inputB.checked)
+                {
+                    var valueB = 1;
+                }
+                else{
+
+                    var valueB = 0;
+                }
+
+                if(valueA == valueB)
+                {
+                    small_led.classList.remove("on");
+                    equal_led.classList.toggle("on");
+                    great_led.classList.remove("on");
+
+                }
+                else if(valueA > valueB)
+                {
+                    small_led.classList.remove("on");
+                    equal_led.classList.remove("on");
+                    great_led.classList.toggle("on");
+                }
+                else
+                {
+                    small_led.classList.toggle("on");
+                    equal_led.classList.remove("on");
+                    great_led.classList.remove("on");
+                }
+            }
+</script>
+  </body>
+</html>

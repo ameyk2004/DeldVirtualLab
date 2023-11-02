@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <meta name = "viewport" content="with=device-width, initial-scale=1.0">
+    <title> Full Adder </title>
+    <link rel="stylesheet" href="./Full.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+<body>
+    
+    <div class="container">
+        <div class="text">
+            <label id="A">A : </label>
+        <input type="number" placeholder="0/1" id="A-inpt" oninput="validateInput(this)">
+        <label id="B">B : </label>
+        <input type="number" placeholder="0/1" id="B-inpt" oninput="validateInput(this)">
+        <label id="Cin">Carry: </label>
+        <input type="number" placeholder="0/1" id="C-inpt" oninput="validateInput(this)">
+        </div>
+        <div class = "img">
+            <img src="./FullAdderimg.png">
+        </div>
+        <!--<button id="A-btn" onclick="changeValue_1()">Value of A</button>
+        <button id="B-btn" onclick="changeValue_2()">Value of B</button>
+        <button id="Cin-btn" onclick="changeValue_3()">Value of Cin</button> -->
+        <div class="text">
+            <label>Sum:</label>
+        <label id="Sum">0</label>
+        <label>Carry:</label>
+        <label id="Carry">0</label>
+        </div>
+        
+        
+        <button id="final-btn" onclick="full()">Validate</button>
+    </div>
+    </body>
+
+
+<script src="./full.js"></script>
+
