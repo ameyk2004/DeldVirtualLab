@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCD Adder Simulator</title>
+    <link rel="stylesheet" href="bcd-simulator.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://pict.edu//images/pic.jpg" type="image/x-icon">
+    <style>
+      .small-font {
+        font-size: 100%;
+        color: black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 400;
+      }
+      .large-font {
+        font-size: 150%;
+        /* color: #0039ff; */
+        color:black;
+        padding: 0px;
+        margin: 0px;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 600;
+      } 
+      .text-center {
+        text-align: center!important;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-black border-1 mb-5">
+        <div class="container-fluid">
+        <a class="navbar-brand ms-3 me-0" href="#">
+            <img src="https://pict.edu//images/pic.jpg" width="90" style="mix-blend-mode: multiply;" alt="PICT">
+        </a>
+        <div class="row-flex col-md-6 col-sm-12 pl-0 m-0">
+            <div class="small-font text-center">Society for Computer Technology and Research's</div>
+            <div class="large-font text-center">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</div>
+            <div class="small-font text-center">Department of Computer Engineering</div>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link" style="font-size: large;" href="../index.html">Home</a>
+            <!-- <a class="nav-link" style="font-size: large;" href="../index.html">About Us</a> -->
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <!-- header -->
+    <h1 class="mb-5 h1" style="font-size: 2rem;">Binary Coded Decimal Adder</h1>
+
+    <!-- this is a container div which is uses display grid for defining the layout and make it responsive -->
+
+    <div class="container-grid">
+        <div>
+            <button onclick="calculateBCD()">Calculate</button> <!--- calculate button -->
+        </div>
+        <div>
+            <!--This contains input A3A2A1A0-->
+            <div class="input1-div">
+                <input type="checkbox" name="a0" id="a0">
+                <label for="a0"></label>
+            
+                <input type="checkbox" name="a1" id="a1">
+                <label for="a1"></label>
+            
+                <input type="checkbox" name="a2" id="a2">
+                <label for="a2"></label>
+            
+                <input type="checkbox" name="a3" id="a3">
+                <label for="a3"></label>
+            </div>
+            <!--This contains input B3B2B1B0-->
+            <div class="input2-div">
+                <input type="checkbox" name="b0" id="b0">
+                <label for="b0"></label>
+            
+                <input type="checkbox" name="b1" id="b1">
+                <label for="b1"></label>
+            
+                <input type="checkbox" name="b2" id="b2">
+                <label for="b2"></label>
+            
+                <input type="checkbox" name="b3" id="b3">
+                <label for="b3"></label>
+            </div>
+
+        </div>
+        <div style="border: 1px solid black;" id="diagram"></div> <!--This div contains the diagram as a background image DO NOT ALTER-->
+        <div>
+            <!--This is the output div that contains outputs Carry S3S2S1S0-->
+            <div class="output-div">
+                    <div id="s0"></div>
+                    <div id="s1"></div>
+                    <div id="s2"></div>
+                    <div id="s3"></div>
+                    <div id="carry"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- This is where we store the outputs -->
+    <div class="output-container">
+        <div class="child">
+            <div style="text-decoration: underline; text-underline-offset: 5px; font-weight: bold;" class="inputA">Input A</div>
+            <div style="text-decoration: underline; text-underline-offset: 5px; font-weight: bold;" class="inputB">Input B</div>
+            <div style="text-decoration: underline; text-underline-offset: 5px; font-weight: bold;" class="sum">Output</div>
+        </div>
+    </div>
+
+    <!--END-->
+    <!--Any Doubts: Ask Tirthraj Mahajan-->
+
+    <script src="bcd-simulation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

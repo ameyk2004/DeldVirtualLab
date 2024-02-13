@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>4-Bit Parity Generator</title>
+    <style></style>
+    </style>
+</head>
+<body onload="checkParity()">
+
+    <table>
+        <tr>
+            <td></td>
+            <td style="align-content: center;">
+                <h1>4-Bit Odd Parity Checker</h1>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="bit-container">
+                    <input style="margin-bottom: 50px;"  type="checkbox" id="bit1" class="bit" value="1" onchange="checkParity()">
+                    <label for="bit1" class="bit-label" id="inputbit1"></label>
+                    <input type="checkbox" id="bit2" class="bit" value="1" onchange="checkParity()">
+                    <label for="bit2" class="bit-label" id="inputbit2" ></label>
+                    <input type="checkbox" id="bit3" class="bit" value="1" onchange="checkParity()">
+                    <label for="bit3" class="bit-label" id="inputbit3"></label>
+                    <input type="checkbox" id="bit4" class="bit" value="1" onchange="checkParity()">
+                    <label for="bit4" class="bit-label" id="inputbit4"></label>
+                </div>
+                <p id="result"></p>
+            </td>
+            <td>
+                <img src="assets/odd.svg" width="800">
+            </td>
+            <td>
+                <!-- LEDs for visual representation -->
+                <div class="led-container">
+                    <div id="led-even" class="led"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script src="odd.js"></script>
+</body>
+</html>

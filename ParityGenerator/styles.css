@@ -1,0 +1,135 @@
+
+body {
+    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin: 10px 0;
+    display: block;
+}
+
+.bit-container {
+    display: flex;
+    justify-content: center;
+        display: flex;
+        flex-direction: column; /* Arrange checkboxes in a column */
+        align-items: flex-start; /* Align checkboxes to the left */
+        margin-bottom: 20px;
+    
+}
+
+.bit {
+    display: none;
+}
+
+.bit-label {
+    background-color: #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 40px;
+    position: relative;
+}
+
+#inputbit1 {
+    margin-bottom: 29px;
+    margin-top: 50px;
+}
+#inputbit2 {
+    margin-bottom: 90px;
+    margin-top: 6px;
+}
+
+#inputbit3 {
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.bit:checked + .bit-label {
+    background-color: #007BFF;
+}
+
+.bit-label::before {
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: 0.3s;
+}
+
+.bit:checked + .bit-label::before {
+    left: calc(100% - 2px);
+    transform: translate(-100%, -50%);
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1{
+    color: #007BFF;
+    margin-top: 0; /* Move h1 to the top */
+}
+
+led-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.led {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 2px solid #000;
+    background-color: white; /* Set the default background color to hide LEDs */
+    display: none; /* Hide the LEDs by default */
+}
+
+#led-even {
+    background-color: green;
+}
+
+#led-odd {
+    background-color: red;
+}
+
+.switch {
+    margin-left: 30px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+#display{
+    margin-top: 125px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>D to SR Conversion Truth Table</title>
+</head>
+<body>
+    <div class="container">
+        <h1>D to SR Conversion Truth Table</h1>
+ 
+        <h4>Block Diagram of D FlipFlop</h4>
+        <div>
+            <img src = "./Pics/d-flip-flop.png">
+        </div>
+       
+
+
+        <button onclick="runSimulation()">Run Simulation</button>
+        <button><a href='../'>Run Simulation</button>
+        <table id="truthTable" border="1px">
+            <tr>
+                <td rowspan="2" colspan="2"><b>Inputs</b></td>
+                <td colspan="2"><b>Outputs</b></td>
+                <td rowspan="2">Destination FlipFlop</td>
+            </tr>
+            <tr>
+                <td>Present State</td>
+                <td>Next State</td>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>R</td>
+                <td>Qn</td>
+                <td>Qn+1</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+
+                <td>0</td> 
+
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+
+                <td>1</td> 
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+
+                <td>0</td> 
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+
+                <td>0</td> 
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+
+                <td>1</td> 
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+
+                <td>1</td> 
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td colspan="2">Invalid</td>
+                <td>X</td> 
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td colspan="2">Invalid</td>
+                <td>X</td> 
+            </tr>
+        </table>
+        <img height="250" width="250" src = "./Pics/d_to_sr.png">
+    </div>
+    <script src="D_to_SR_modified.js"></script>
+</body>
+</html>

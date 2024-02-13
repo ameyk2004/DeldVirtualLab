@@ -1,0 +1,275 @@
+<html>
+    <head>
+      <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+      <title>
+        One bit Comparator
+      </title>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+.led {
+      width: 50px;
+      height: 50px;
+      background-color: #d4d4d4;
+      border-radius: 50%;
+      margin-bottom: 35px;
+    }
+
+    .led.on {
+      background-color: #00ff00;
+    }
+            img{
+              margin-left: 0px;
+            }
+            
+            .switch {
+              margin-top: 70px;
+              margin-left: 30px;
+              position: relative;
+              display: inline-block;
+              width: 60px;
+              height: 34px;
+            }
+        
+            .switch input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+        
+            .slider {
+              position: absolute;
+              border-radius: 8%;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .2s;
+              transition: .2s;
+            }
+        
+            .slider:before {
+              position: absolute;
+              border-radius: 8%;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .2s;
+              transition: .2s;
+            }
+        
+            input:checked + .slider {
+              background-color: #0960a7;
+            }
+        
+            input:focus + .slider {
+              box-shadow: 0 0 1px #29699d;
+            }
+        
+            input:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+            .header{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .container{
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+        }
+        .insidecontainer{
+          display: flex;
+          align-items:center;
+          flex-direction: column;
+          margin-bottom:80px;
+        }
+        .small-font {
+        font-size: 100%;
+        color: black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 400;
+      }
+      .large-font {
+        font-size: 150%;
+        color:black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 500;
+      } 
+      .text-center {
+        text-align: center!important;
+      }
+      
+      </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+      
+
+            
+            
+  
+    </head>
+    <body class="not-dark">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-black border-1 mb-5">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3 me-0" href="#">
+            <img src="https://pict.edu//images/pic.jpg" width="90" style="mix-blend-mode: multiply;" alt="PICT">
+          </a>
+          <div class="row-flex col-md-6 col-sm-12 pl-0 m-0">
+            <div class="small-font text-center">Society for Computer Technology and Research's</div>
+            <div class="large-font text-center">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</div>
+            <div class="small-font text-center">Department of Computer Engineering</div>
+          </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+      <button class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"> <a href="../SequenceDet/theory.html">Theory</a> </button>
+          
+        </div>
+      </nav>
+    
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <div class="header">
+        <img src="pictlogo.png", width="150">
+    <h1>SCTR's Pune Institute of Computer Technology, Dhankawadi, Pune - 411043</h1>
+    </div>
+    <hr>
+    <h2><center>Department of Computer Engineering</center></h2>  -->
+
+    <h2><center>Sequence Detector</center></h2>
+    <form class="mx-auto">
+      <label for="number-input" class="block my-8 text-center mb-2 text-sm font-medium text-gray-900 mx-auto">Enter sequence to detect:</label>
+      <input type="number" id="seqToDetect" aria-describedby="helper-text-explanation" class="mx-auto my-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="90210" required>
+    </form>
+    <br>
+    <div class="container">
+
+      <div class="insidecontainer my-20">
+        
+        
+<form class="w-full mx-auto">
+  <!-- <label for="number-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a number:</label> -->
+  <input type="number" id="sequence-input" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="90210" required>
+</form>
+
+        
+        
+          
+
+
+      </div>
+      
+      <div class="insidecontainer" ></div>
+      <img src = "Fig1-Sequence-Detector.png" width = "600">
+      <div class="insidecontainer my-12">
+
+        <p id="smaller"></p>
+        <p id="equal"></p>
+        <p id="greater"></p>
+
+       
+        <div class="led" id="equalled" ></div>
+        
+      </div>
+    </div>
+    <div class="container">
+      <button type="button" id="simulate" class="text-white my-12 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Simulate</button>
+
+    </div>
+
+
+<div class="overflow-x-auto">
+  <table class="w-2/3 mx-auto my-12 text-sm text-left rtl:text-right text-gray-500 ">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-100 ">
+          <tr>
+              <th scope="col" class="px-6 py-3 rounded-s-lg">
+                  Sr. No.
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  Iteration
+              </th>
+              <th scope="col" class="px-6 py-3 rounded-e-lg">
+                  Result
+              </th>
+          </tr>
+      </thead>
+      <tbody id="table-body">
+          
+          
+      </tbody>
+      
+  </table>
+</div>
+
+  
+        <script>
+          var seqToDetect = 0
+          const seqToDetectInput = document.getElementById("seqToDetect")
+          const seqInputInput = document.getElementById("sequence-input")
+          const simulateButton = document.getElementById("simulate")
+          const tableBody = document.getElementById("table-body")
+          const led = document.getElementById("equalled")
+          simulateButton.addEventListener("click", function(){
+            seqToDetect = seqToDetectInput.value 
+            inputSequence = seqInputInput.value
+
+            iterationSize = inputSequence.length
+
+            for (let index = 0; index <= (seqToDetect.length - inputSequence.length); index++) {
+    setTimeout(() => {
+        const element = seqToDetect.slice(index, iterationSize + index);
+        console.log(element === inputSequence);
+        if(element === inputSequence){
+          led.classList.add("on")
+        }
+        else{
+          led.classList.remove("on")
+        }
+        const newRow = document.createElement("tr");
+        newRow.setAttribute("class", "bg-white");
+        const data1 = document.createElement("th");
+        data1.setAttribute("class", "px-6 py-4 font-medium text-gray-900 whitespace-nowrap");
+        data1.innerText = index;
+        const data2 = document.createElement("td");
+        data2.setAttribute("class", "px-6 py-4");
+        data2.innerText = element;
+        const data3 = document.createElement("td");
+        data3.setAttribute("class", "px-6 py-4");
+
+        data3.innerText = element === inputSequence;
+        newRow.appendChild(data1);
+        newRow.appendChild(data2);
+        newRow.appendChild(data3);
+        tableBody.append(newRow);
+    }, index * 1000); // Multiply index by 1000 milliseconds (1 second)
+}
+          })
+
+
+
+          seqToDetectInput.addEventListener("change", function(){
+            
+            console.log(seqToDetect)
+            
+          })
+            
+        </script>
+    </body>
+</html>

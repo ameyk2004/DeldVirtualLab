@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <style>
+        .a
+        {
+        text-align: center;
+        }
+
+        .small-font {
+        font-size: 100%;
+        color: black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 400;
+      }
+      .large-font {
+        font-size: 150%;
+        color:black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 500;
+      } 
+      .text-center {
+        text-align: center!important;
+      }
+
+    </style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://pict.edu//images/pic.jpg" type="image/x-icon">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-black border-1 mb-5">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3 me-0" href="#">
+            <img src="https://pict.edu//images/pic.jpg" width="90" style="mix-blend-mode: multiply;" alt="PICT">
+          </a>
+          <div class="row-flex col-md-6 col-sm-12 pl-0 m-0">
+            <div class="small-font text-center">Society for Computer Technology and Research's</div>
+            <div class="large-font text-center">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</div>
+            <div class="small-font text-center">Department of Computer Engineering</div>
+          </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" style="font-size: large;" href="../../4. Code convertors/bcd_excess3.html">Simulator</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <h3 class="a">TITLE : CODE CONVERTORS</h3>
+    <h3>OBJECTIVE :</h3>
+    <ol>
+        <li>Design and Implement 4-bit Binary to Gray code converter using minimum
+            number of logic gates and Vice-versa</li>
+        <li>Design and Implement Excess-3 to BCD code converter using minimum number of
+            logic gates and Vice-versa</li>
+    </ol>
+    <h3>APPARATUS :</h3>
+    <p>
+        Digital-Board, GP-4Patch-Cords, IC-74LS86, IC-74LS32, IC-74LS08 / IC-74LS04 and
+Required Logic gates if any.
+    </p>
+    <h3>THEORY :</h3>
+    <p>
+        Code converter is combinational logic circuits, which can be used to convert one number
+        system to another. Binary code is a weighted code having base 2.Gray code is a code in
+        which one bit change is obtained; Gray code is also called unit distance code or reflected
+        code. BCD code is basically a 4-bit binary code but it is valid from 0 to 9. Excess-3 code
+        is basically 4-bit binary code which can be obtained by adding 3 to each binary, that is
+        Excess-3 code are valid from 3 to 15.Excess-3 code is Non-Weighted code.Excess-3 code
+        is also called as sequential code or self-complementary code.
+    </p>
+    <h3>Pin Diagram</h3>
+    <img height="400" width="500" src="./pics/pin_diagram.png"/>
+    <h3>PROCEDURE:</h3>
+    <ol>
+        <li>Make the connections as per the Logic circuit of 4-bit Binary to 4-bit Gary Code
+            converter and Vice-versa and Verify its Truth Table.</li>
+        <li> Make the connections as per the Logic circuit of 4-bit BCD to 4-bit Excess-3 Code
+            converter and Vice-versa and Verify its Truth Table</li>
+    </ol>
+    <h3>Binary to gray code convertor:</h3>
+    <img height="400" width="500" src="./pics/b_to_g.png">
+    <h3>Binary to Excess-3 code convertor:</h3>
+    <img height="400" width="500" src="./pics/b_to_e.png">
+    <h3>
+        Outcome:
+    </h3>
+    <p>Thus, we studied different codes and their conversions
+        including applications. The truth tables have been verified
+        using IC 7486, 7432, 7408, and 7404.</p>
+    
+</html>

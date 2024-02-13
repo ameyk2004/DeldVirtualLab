@@ -1,0 +1,30 @@
+.small-font {
+    font-size: 100%;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.large-font {
+    font-size: 150%;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.imagecont {
+    width: 30%;
+    margin-top: 80px;
+    align-self: center;
+
+}
+
+.body {
+    background-color: #ab1313;
+}

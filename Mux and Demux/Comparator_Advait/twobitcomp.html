@@ -1,0 +1,302 @@
+<html>
+    <head>
+        <title>
+            Two bit Comparator
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+      
+      .led {
+      width: 50px;
+      height: 50px;
+      background-color: #d4d4d4;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .led.on {
+      background-color: #00ff00;
+    }
+
+    .led.off
+    {
+      background-color: #d4d4d4;
+    }
+                  img{
+                    margin-left: 0px;
+                  }
+                  
+                  .switch {
+                    margin-left: 30px;
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 34px;
+                  }
+              
+                  .switch input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                  }
+              
+                  .slider {
+                    position: absolute;
+                    border-radius: 8%;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    -webkit-transition: .2s;
+                    transition: .2s;
+                  }
+              
+                  .slider:before {
+                    position: absolute;
+                    border-radius: 8%;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    -webkit-transition: .2s;
+                    transition: .2s;
+                  }
+              
+                  input:checked + .slider {
+                    background-color: #0960a7;
+                  }
+              
+                  input:focus + .slider {
+                    box-shadow: 0 0 1px #29699d;
+                  }
+              
+                  input:checked + .slider:before {
+                    -webkit-transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    transform: translateX(26px);
+                  }
+                  .header{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .container{
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+        }
+        .insidecontainer{
+          display: flex;
+          align-items:center;
+          flex-direction: column;
+        }
+          .small-font {
+        font-size: 100%;
+        color: black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 400;
+      }
+      .large-font {
+        font-size: 150%;
+        color:black;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 500;
+      } 
+      .text-center {
+        text-align: center!important;
+      }
+     
+                  
+                  
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <link rel="shortcut icon" href="https://pict.edu//images/pic.jpg" type="image/x-icon">
+    </head>
+    <body onload="compareBits()">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-black border-1 mb-5">
+            <div class="container-fluid">
+              <a class="navbar-brand ms-3 me-0" href="#">
+                <img src="https://pict.edu//images/pic.jpg" width="90" style="mix-blend-mode: multiply;" alt="PICT">
+              </a>
+              <div class="row-flex col-md-6 col-sm-12 pl-0 m-0">
+                <div class="small-font text-center">Society for Computer Technology and Research's</div>
+                <div class="large-font text-center">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</div>
+                <div class="small-font text-center">Department of Computer Engineering</div>
+              </div>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" style="font-size: large;" href="../../New_mux_and comp/Comparator_Advait/theory_comparator.html">Theory</a>
+                  <a class="nav-link" style="font-size: large;" href="../../New_mux_and comp/Comparator_Advait/onebitcomp.html">One bit comp</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <!-- <div class="header">
+            <img src="pictlogo.png", width="150">
+        <h1>SCTR's Pune Institute of Computer Technology, Dhankawadi, Pune - 411043</h1>
+        </div> -->
+        
+        <h2><center>Two bit Comparator</center></h2>
+        <br>
+
+<div class="container">
+    <div class="insidecontainer">
+
+        <label class = "switch">
+            
+            <input type = "checkbox" id="B1" onchange="compareBits()">
+            <span class = "slider"></span>
+            </label>
+<br>
+            <label class = "switch">
+            
+                <input type = "checkbox" id="B0" onchange="compareBits()">
+                <span class = "slider"></span>
+                </label>
+<br>
+                <label class = "switch">
+            
+                    <input type = "checkbox" id="A1" onchange="compareBits()">
+                    <span class = "slider"></span>
+                    </label>
+<br>
+                    <label class = "switch">
+            
+                        <input type = "checkbox" id="A0" onchange="compareBits()">
+                        <span class = "slider"></span>
+                        </label>
+
+                        
+    </div>
+    <div class="insidecontainer">
+        <img src = "Resources/twobit_diagram.jpeg" width="800">
+    </div>
+    <div class="insidecontainer">
+        <div class="led" id="smallerled"></div>
+        <div class="led" id="greaterled"></div>
+        <div class="led" id="equalled"></div>
+        <br><br><br><br><br>
+    </div>
+</div>
+
+
+    
+    
+    <script>
+        function compareBits()
+            {
+
+                var inputA1 = document.getElementById("A1");
+                var inputA0 = document.getElementById("A0");
+                var inputB1 = document.getElementById("B1");
+                var inputB0 = document.getElementById("B0");
+
+                if(inputA1.checked)
+                {
+                    var valueA1 = 1;
+                }
+                else
+                {
+                    var valueA1 = 0;
+                }
+                if(inputA0.checked)
+                {
+                    var valueA0 = 1;
+                }
+                else{
+
+                    var valueA0 = 0;
+                }
+                if(inputB1.checked)
+                {
+                    var valueB1 = 1;
+                }
+                else{
+
+                    var valueB1 = 0;
+                }
+                if(inputB0.checked)
+                {
+                    var valueB0 = 1;
+                }
+                else{
+
+                    var valueB0 = 0;
+                }
+
+
+                compare(valueA0,valueA1,valueB0,valueB1);
+            }
+        
+
+        function compare(inputA0,inputA1,inputB0,inputB1)
+        {
+
+            let greaterResult = 0;
+            let smallerResult = 0;
+            let equalResult = 0;
+            intNum1 = toInt(inputA1, inputA0);
+            intNum2 = toInt(inputB1,inputB0);
+
+            if(intNum1>intNum2)
+            {
+                greaterResult = 1;
+            }
+            else if (intNum1<intNum2)
+            {
+                smallerResult = 1;
+
+            }
+            else
+            {
+                equalResult = 1;
+            }
+
+            var small_led = document.getElementById("smallerled");
+            var equal_led = document.getElementById("equalled");
+            var great_led = document.getElementById("greaterled");
+
+            if(smallerResult==1)
+            {
+                small_led.classList.add("on");
+                equal_led.classList.remove("on");
+                great_led.classList.remove("on");
+            }
+            else if(equalResult==1)
+            {
+                small_led.classList.remove("on");
+                equal_led.classList.add("on");
+                great_led.classList.remove("on");
+            }
+            else if(greaterResult==1)
+            {
+                small_led.classList.remove("on");
+                equal_led.classList.remove("on");
+                great_led.classList.add("on");
+            }
+        }    
+
+        function toInt(a,b)
+        {
+            var integer;
+
+            integer = a*2 + b*1;
+
+            return integer;
+        }
+    </script>
+    </body>
+</html>

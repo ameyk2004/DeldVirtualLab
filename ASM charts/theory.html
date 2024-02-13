@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASM Chart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="https://pict.edu//images/pic.jpg" type="image/x-icon">
+</head>
+
+<body>
+  <h1 class="a text-center text-4xl p-8">
+    PUNE INSTITUTE OF COMPUTER TECHNOLOGY, PUNE-411043
+  </h1>
+  <div class="pr-8">
+    <hr />
+    <h2 class="a text-3xl text-center p-8">
+      Department of Computer Engineering
+    </h2>
+    <h3 class="a text-3xl pt-8 text-center">Title: ASM chart</h3>
+    <div class="mt-4 mx-auto container mt-8">
+      <h1 class="text-2xl mt-4 mb-8">
+        An ASM chart consists of three basic elements : The state box, the
+        decision box, and the conditional box.<br />
+        <p class="font-bold inline-block mt-4">State box</p>
+        <p class="inline">
+          : A state in the control sequence is indicated by a state box, as
+          shown in the Fig, 8.1.2 As shown in the Fig. 8.1.2, rectangle shape
+          is used to represent state box. At the left of this box is the name
+          of the state, such as A, B, Qy, Qy- On the right hand top comer of
+          the box is a list of the flip-flop values that define that state.
+          The circuit outputs that can occur whenever the circuit is in the
+          corresponding state regardless of input values are listed within the
+          box. Finally, a line drawn from state box, known as exit, indicates
+          the path to the next state
+        </p>
+      </h1>
+
+      <img class="mx-auto mt-8 w-auto" src="Screenshot 2024-01-06 120108.png" alt="" srcset="" />
+      <p class="font-bold inline-block mt-4 text-2xl">Decision box</p>
+      <p class="inline text-2xl">
+        The decision box describes the effect of an input on the control subsystem. It has a diamond shape box with two
+        or more exit paths, as shown in the fig 8.1.3. The input condition to be tested is written inside the diamond
+        box. Each value either 0 or 1 that may be assumed by an input or expression in a diamond is associated with an
+        exit path from that diamond. These paths lead to the blocks corresponding to the next states of the circuit
+        following the next clock pulse.
+      </p>
+      </h1>
+
+      <img class="mx-auto mt-8 w-auto" src="Screenshot 2024-01-06 121813.png" alt="" srcset="" />
+
+      <p class="font-bold inline-block mt-4 text-2xl">Conditional box</p>
+      <p class="inline text-2xl">
+        The state and decision boxes are familiar from use in conventional flowcharts. The third basic element, the
+        conditional box, is unique to the ASM chart. It is an oval shape box. Its rounded corners differentiate it from
+        the state box. The input path for the conditional box always comes from one of the exit paths of a decision box.
+        The outputs that occur when the path to a conditional output box is satisfied are listed within the box.
+      </p>
+      </h1>
+
+      <img class="mx-auto mt-8 w-auto" src="Screenshot 2024-01-06 122815.png" alt="" srcset="" />
+
+      <p class="font-bold  mt-4 text-2xl">Salient faetures:</p>
+
+      <ol class="text-2xl mb-12" type="i">
+        <span class="font-bold">1. </span>An ASM chart describes the sequence of events as well as the timing
+        relationship
+        between the states of a sequential controller and the events that occur while going
+        from one state to the next.<br>
+
+        <span class="font-bold">2. </span>Every block in an ASM chart specifies the operations that are to be performed
+        during
+        one common clock pulse.<br>
+
+        <span class="font-bold">3. </span>The operations specified within the state and conditional boxes in the block
+        are
+        performed in the datapath subsystem.<br>
+
+        <span class="font-bold">4. </span>The change from one state to next is performed in the control subsystem.
+        An ASM chart consists of one or more interconnected blocks.<br>
+
+        <span class="font-bold">5. </span>An ASM block has one entrance and any number of exit paths represented by the
+        structure of the decision boxes.<br>
+
+        <span class="font-bold">6. </span>Each block in the ASM chart describes the state of the system during one
+        clock-pulse
+        interval. When a digital system enters the state associated with a given ASM block,
+        the outputs indicated within the state box becomes true. The conditions associated
+        with the decision boxes are evaluated to determine which path or paths to be
+        followed to enter into the next ASM block.<br>
+      </ol>
+
+
+      </p>
+      </h1>
+
+
+    </div>
+  </div>
+</body>
+
+</html>

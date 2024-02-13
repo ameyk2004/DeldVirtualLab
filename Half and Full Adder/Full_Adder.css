@@ -1,0 +1,160 @@
+.small-font {
+    font-size: 100%;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.large-font {
+    font-size: 150%;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+
+.led {
+    width: 50px;
+    height: 50px;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.led.on {
+    background-color: #00ff00;
+}
+
+.switch {
+    margin-left: 30px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    border-radius: 8%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    border-radius: 8%;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked+.slider {
+    background-color: #0960a7;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #29699d;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+
+}
+
+.text {
+    font-size: 23px;
+    padding: 10px;
+    margin: auto;
+}
+
+.button {
+    padding-top: 0px;
+
+    margin-bottom: 0px;
+    margin-left: 350px;
+    height: 100%
+}
+
+.button2 {
+    margin-top: 0px
+}
+
+.output-container {
+    margin: auto;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: auto;
+    width: 40vw;
+    height: 50vh;
+    justify-content: flex-start;
+}
+
+.output-container .child {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border:1px solid black; */
+    flex-basis: 10vh;
+    /* position: relative; */
+    /* height: 10vh; */
+    /* width: 100%; */
+}
+
+.output-container .child .inputA,
+.output-container .child .inputB,
+.output-container .child .sum {
+    text-align: center;
+    padding-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.output-container .child .inputA,
+.output-container .child .inputB {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.output-container .child .sum {
+    border-bottom: 1px solid black;
+}

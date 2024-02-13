@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JK to T Conversion Truth Table</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JK to T Conversion Truth Table</h1>
+ 
+        <h4>Block Diagram of JK FlipFlop</h4>
+        <div>
+            <img height="250" width="250" src = "./Pics/jk-flip-flop.png">
+        </div>
+       
+
+
+        <button onclick="runSimulation()">Run Simulation</button>
+        <button ><a href="../Theory/Flip flop conversion/ff_conv_manual.html">Theory</a></button>
+        <table id="truthTable" border="1px">
+            <tr>
+                <td rowspan="2"><b>Inputs</b></td>
+                <td colspan="2"><b>Outputs</b></td>
+                <td rowspan="2" colspan="2">Destination FlipFlop</td>
+            </tr>
+            <tr>
+                <td>Present State</td>
+                <td>Next State</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Qn</td>
+                <td>Qn+1</td>
+                <td>J</td>
+                <td>K</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+
+                <td>Invalid</td> 
+
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>Invalid</td>
+
+                <td>0</td> 
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+
+                <td>Invalid</td> 
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>Invalid</td>
+
+                <td>1</td> 
+            </tr>
+        </table>
+        <img height="250" width="250" src = "./Pics/jk_to_t.png">
+    </div>
+    <script src="Jk_to_T_modified.js"></script>
+</body>
+</html>
