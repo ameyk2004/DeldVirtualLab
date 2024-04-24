@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../Documents/Programs/Web Development/Inhouse"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "2. Flipflop conversions"
+	}
+}

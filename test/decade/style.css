@@ -1,0 +1,112 @@
+body{
+    margin:0;
+    padding: 0;
+    /* background: url("DecodeCounter.png"); */
+    background-position: cover ;
+    background-size: cover;
+}   
+.counterimg{
+    padding-left: 4%;
+    padding-top: 5%;
+    width: 200px;  
+    /* border:1px solid black; */
+    /* background-image: url('DecadeCounter.png'); */
+}
+
+.title{
+    text-align: center;
+    letter-spacing: 1px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.vcc{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 85px;
+    padding: 12px;
+    border-radius: 10px;
+    border:1px solid black;
+    background-color: transparent;
+}
+
+.vcc:hover{
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.clk{
+    position: absolute;
+    width: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid black;
+    background-color: transparent;
+    top:57%;
+    right: 40%;
+}
+
+.clk:hover{
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.output-btn{
+    position: absolute;
+    top: 32%;
+    left: 35%;
+    display: flex;
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    justify-content: flex-end;
+    column-gap: 45px;
+}
+
+.output{
+    border:1px solid black;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+#align_items{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 1rem;
+    padding: 3rem;
+}
+          
+#item{
+  /* border: 1px ssolid black; */
+  border-radius: 0rem;
+  margin: 1px;
+  min-height: fit-content;
+  height: 50rem;
+  margin-top: 0rem;
+}
+
+#align_demo{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  padding: 0rem;
+}
+
+#demo_item{
+  /* border: 1px solid black; */
+  border-radius: 0rem;
+  margin: 1px;
+  min-height: fit-content;
+  height: 20rem;
+  width: 1fr;
+  margin-top: 0rem;
+}
