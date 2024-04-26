@@ -1,0 +1,208 @@
+body {
+  background-color: #fff;
+}
+
+svg {
+  position: absolute;
+  top: 90%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: -1;
+  /* Place it behind other content */
+}
+
+.path {
+  animation: draw 20s infinite;
+  animation-timing-function: linear;
+}
+
+.path-01 {
+  animation-delay: 0s;
+}
+
+.path-02 {
+  animation-delay: 1s;
+}
+
+.path-03 {
+  animation-delay: 2s;
+}
+
+.path-04 {
+  animation-delay: 3s;
+}
+
+.path-05 {
+  animation-delay: 4s;
+}
+
+
+
+@keyframes draw {
+  0% {}
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* Scroll Bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #A94438 !important;
+}
+
+.btn-dark,
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:visited {
+  background-color: #030637 !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+#cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 70vw;
+  margin: auto;
+  padding-inline: 1rem 1rem;
+  padding-block: 1rem 1rem;
+
+}
+
+#card {
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 30vh;
+
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  transition: all 300ms ease;
+  background-color: #FFF6E9;
+
+}
+
+#card:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#card .cardImage {
+  position: relative;
+  background-color: #888;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+
+#card .cardImage img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+#card .infoImage {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
+#card .infoImage .title {
+  width: 100%;
+  text-align: center;
+  /* border:1px solid black; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+
+}
+
+#card:hover .infoImage .title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#card .infoImage .buttonDiv {
+  /* border:1px solid black; */
+  min-height: 5vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-block: 10px;
+}
+
+#card:hover .infoImage .buttonDiv button {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 600px) {
+  #cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 70vw;
+    margin: auto;
+    padding-inline: 1rem 1rem;
+    padding-block: 1rem 1rem;
+  }
+
+  #card .infoImage .buttonDiv div {
+    margin-bottom: 10px;
+  }
+}
