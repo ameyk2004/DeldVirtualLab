@@ -65,43 +65,66 @@
         <h1>2-bit Comparator</h1>
     </center>
 
-    <div class="container">
-        <div class="button" style="margin-top: 200px;">
+    <div id="align_items">
+        <div id="item">
+            <div id="align_demo">
+                <div id="demo_item">
 
-            B1:
-            <label class="switch">
+                    <div class="container">
+                        <div class="button" style="margin-top: 0px;">
+                
+                            B1:
+                            <label class="switch">
+                
+                                <input type="checkbox" id="B1" onchange="compareBits()">
+                                <span class="slider"></span>
+                            </label>
+                            <br>
+                            B0:
+                            <label class="switch">
+                                <input type="checkbox" id="B0" onchange="compareBits()">
+                                <span class="slider"></span>
+                            </label>
+                            <br>
+                            A1:
+                            <label class="switch">
+                                <input type="checkbox" id="A1" onchange="compareBits()">
+                                <span class="slider"></span>
+                            </label>
+                            <br>
+                            A0:
+                            <label class="switch">
+                                <input type="checkbox" id="A0" onchange="compareBits()">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        </div>
+                </div>
+                <div id="demo_item">
 
-                <input type="checkbox" id="B1" onchange="compareBits()">
-                <span class="slider"></span>
-            </label>
-            <br>
-            B0:
-            <label class="switch">
-                <input type="checkbox" id="B0" onchange="compareBits()">
-                <span class="slider"></span>
-            </label>
-            <br>
-            A1:
-            <label class="switch">
-                <input type="checkbox" id="A1" onchange="compareBits()">
-                <span class="slider"></span>
-            </label>
-            <br>
-            A0:
-            <label class="switch">
-                <input type="checkbox" id="A0" onchange="compareBits()">
-                <span class="slider"></span>
-            </label>
+                    <div class="img">
+                        <img src="Resources/twobit_diagram.jpeg" width="600" height="330">
+                    </div>
+                </div>
+                <div id="demo_item">
+
+                    <div class="text">
+                        <br>
+                        <div class="led" id="smallerled"></div>
+                        <div class="led" id="greaterled"></div>
+                        <div class="led" id="equalled"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="img">
-            <img src="Resources/twobit_diagram.jpeg" width="900" height="430">
+        <div id="item">
+            <img src="Resources/2bit_tt.png" width="600px">
         </div>
-        <div class="text">
-            <br>
-            <div class="led" id="smallerled"></div>
-            <div class="led" id="greaterled"></div>
-            <div class="led" id="equalled"></div>
-        </div>
+    </div>
+
+
+
+        
         <script>
             function compareBits() {
 

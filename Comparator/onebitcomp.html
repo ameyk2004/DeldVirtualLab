@@ -1,13 +1,10 @@
-<html>
-
-<head>
+<html><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="1bitcomparator.css">
   <link rel="shortcut icon" href="https://pict.edu//images/pic.jpg" type="image/x-icon">
   <title>One Bit Comparator Simulation</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="shortcut icon" href="https://pict.edu//images/pic.jpg" type="image/x-icon">
   <style>
     .small-font {
@@ -30,11 +27,72 @@
       text-align: center !important;
     }
 
-    </style </head><nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-black border-1 mb-5"><div class="container-fluid"><a class="navbar-brand ms-3 me-0" href="#"><img src="https://pict.edu//images/pic.jpg" width="90" style="mix-blend-mode: multiply;" alt="PICT"></a><div class="row-flex col-md-6 col-sm-12 pl-0 m-0"><div class="small-font text-center">Society for Computer Technology and Research's</div>
- <div class="large-font text-center">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</div><div class="small-font text-center">Department of Computer Engineering</div></div><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup"><div class="navbar-nav"><a class="nav-link" style="font-size: large;" href="../sarthak/DELD-Simulator-main/manual_01.html">Theory</a></div></div></div></nav><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    </style></head><body onload="compareBits()"><nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-black border-1 mb-5"><div class="container-fluid"><a class="navbar-brand ms-3 me-0" href="#"><img src="https://pict.edu//images/pic.jpg" width="90" style="mix-blend-mode: multiply;" alt="PICT"></a><div class="row-flex col-md-6 col-sm-12 pl-0 m-0"><div class="small-font text-center">Society for Computer Technology and Research's</div>
+ <div class="large-font text-center">PUNE INSTITUTE OF COMPUTER TECHNOLOGY</div>
+ 
+ <div class="small-font text-center">Department of Computer Engineering</div>
+ 
+ </div><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup"><div class="navbar-nav"><a class="nav-link" style="font-size: large;" href="../sarthak/DELD-Simulator-main/manual_01.html">Theory</a></div></div></div></nav><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      
+      <center><h1>1-bit Comparator</h1></center>
 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><body onload="compareBits()"><center><h1>1-bit Comparator</h1></center><div class="container"><div class="button"><p style="margin-top: 0px;"><label class="switch"><input type="checkbox" id="A" onchange="compareBits()"><span class="slider"></span></label></p><br><p class="button2"><br><label class="switch"><input type="checkbox" id="B" onchange="compareBits()"><span class="slider"></span></label></p></div><div class="img"><img src="Resources/onebit_circuitdiagram.png" width="500"></div><div class="output"><p id="smaller"></p><p id="equal"></p><p id="greater"></p><div class="led" id="smallerled"></div><div class="led" id="equalled"></div><div class="led" id="greaterled"></div></div></div><script>function compareBits() {
+      <div id="align_items">
+
+        <div id="item">
+
+          <div id="align_demo">
+
+            <div id="demo_item">
+
+              <div class="container">
+                <div class="button"><p style="margin-top: 0px;"><label class="switch"><input type="checkbox" id="A" onchange="compareBits()"><span class="slider"></span></label></p><br><p class="button2">
+                  <br>
+                  <label class="switch"><input type="checkbox" id="B" onchange="compareBits()"><span class="slider"></span></label></p></div>
+              </div>
+
+            </div>
+
+
+              <div id="demo_item">
+
+                <div class="img"><img src="Resources/onebit_circuitdiagram.png" width="500"></div>
+              </div>
+
+              <div id="demo_item">
+                <div class="output"><p id="smaller"></p><p id="equal"></p><p id="greater"></p>
+                  <div class="led" id="smallerled"></div>
+                  <div class="led on" id="equalled"></div>
+                  <div class="led" id="greaterled"></div>
+                </div>
+              </div>
+            
+            </div>
+            
+        </div>
+
+        <div id="item">
+
+          <img src="Resources/1bit_tt.png">
+        </div>
+        
+      </div>
+
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <script>function compareBits() {
         var small_led = document.getElementById("smallerled");
         var equal_led = document.getElementById("equalled");
         var great_led = document.getElementById("greaterled");
