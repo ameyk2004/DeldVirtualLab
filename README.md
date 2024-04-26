@@ -1,6 +1,8 @@
 # Digital Electronics Virtual Laboratory
 Welcome to the Digital Electronics Laboratory Simulator (DELD) project! This project aims to provide a simulated environment for understanding and experimenting with digital electronics circuits, akin to a real-life Digital Electronics Laboratory experience. The simulator is designed to assist students and enthusiasts in comprehending the principles and applications of digital electronics through practical experimentation.
 
+<p align="center"><img src="https://socialify.git.ci/ameyk2004/DeldVirtualLab/image?font=Raleway&amp;logo=https%3A%2F%2Fdeldvirtuallab.netlify.app%2FResources%2Fcircuit-icon-png-2.jpg&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;theme=Light" alt="project-image"></p>
+
 ## Index
 
 1. **Experiment 1**: Introduction to Basic Logic Gates
