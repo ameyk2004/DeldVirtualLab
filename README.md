@@ -1,5 +1,4 @@
-# Digital Electronics Laboratory Simulator (DELD)
-
+# Digital Electronics Virtual Laboratory
 Welcome to the Digital Electronics Laboratory Simulator (DELD) project! This project aims to provide a simulated environment for understanding and experimenting with digital electronics circuits, akin to a real-life Digital Electronics Laboratory experience. The simulator is designed to assist students and enthusiasts in comprehending the principles and applications of digital electronics through practical experimentation.
 
 ## Index
@@ -35,3 +34,13 @@ The simulator includes features such as:
 - Simulation controls (start, stop, pause, step)
 - Signal waveform analysis tools
 - Comprehensive documentation
+
+
+
+## Authors
+
+- [Advait Joshi](https://www.github.com/adv-AI-t)
+- [Amey Kulkarni](https://www.github.com/ameyk2004)
+- [Anshul Kalbande](https://www.github.com/anshulLuhsna)
+- [Tirthraj Mahajan](https://www.github.com/tirthraj07)
+- [Anurag Mandke](https://www.github.com/anuragmandke)
