@@ -37,7 +37,16 @@ The simulator includes features such as:
 - Signal waveform analysis tools
 - Comprehensive documentation
 
+## <span id="assignment-1">Assignment 1</span> - Binary Tree  
 
+### Half Adder
+
+```
+Half Adder is a combinational logic device, which has two inputs & two outputs, Sum and Cary out.
+A half adder is a digital circuit that takes a two input signal and produces two outputs
+```
+
+---
 
 ## Authors
 
