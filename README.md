@@ -228,3 +228,7 @@ A shift register is a type of digital circuit using a cascade of flip-flops wher
 - [Rinit Jain](https://www.github.com/RinitJain)
 - [Sarthak Kanganae](https://www.github.com/Sarthak-Kangane)
 
+## Our Mentors
+
+- [Dr. Geetanjali Kale] (https://www.linkedin.com/in/dr-geetanjali-kale-17148922/)
+
